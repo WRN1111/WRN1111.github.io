@@ -1,7 +1,7 @@
 +++
-date = '{{ .Date }}'
-draft = true
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = '2025-09-14T00:07:06+08:00'
+draft = false
+title = 'Valueof和tostring区别'
 +++
 
 LC49 String.valueOf(c) 换成c.toString()就出错

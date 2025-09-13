@@ -89,7 +89,6 @@ namesilo 的DNS解析很慢。建议改到Cloudflare解析，还可以开CDN.
 
 在接下来的页面中，注意记下两项
 “名称服务器”的信息
-![alt text](image.png)
 
 登录 namesilo.com
 https://www.namesilo.com/account_domains.php?rid=ef95362qr

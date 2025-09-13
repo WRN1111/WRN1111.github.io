@@ -1,3 +1,9 @@
++++
+date = '2025-09-13T12:43:29Z'
+draft = false
+title = '简易版CICD流程'
++++
+
 🔧 目标
 
 多个 GitHub 仓库（a-service、b-service、c-service …）

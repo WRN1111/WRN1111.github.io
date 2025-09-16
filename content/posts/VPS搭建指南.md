@@ -112,29 +112,21 @@ namesilo 修改域名相关设置
 “SSL/TLS”，设置为“完全”。
 
 =======================================
-5. 操作命令行在VPS上安装V2Ray Websocket+TLS模式
+5. 操作命令行在VPS上安装V2Ray Reality模式
 更新一下软件源信息。输入以下命令，回车。
 
-apt update
+先安装https://github.com/MHSanaei/3x-ui/blob/main/README.zh_CN.md
 
-安装curl
+之后自定义端口，UFW放行，管理面板。
 
-apt install curl -y
+但此时还是http协议，直接输入用户名密码很危险，所以要在本地设置SSH转发，ssh -L xxxxx:localhost:xxxxx username@ip -p 
 
-安装V2Ray Websocket+TLS模式
+之后在浏览器访问localhost:xxxxx 登陆进去，将公钥和证书设置好。
 
-bash <(curl -L https://github.com/crazypeace/v2ray_wss/raw/main/install.sh) 你的域名
-
-如果想知道这行命令在干啥，请看 https://github.com/crazypeace/v2ray_wss
-也可以试着不带参数执行这个脚本，看看整个执行过程。脚本还会进行一些检测确认你的准备工作做得正确。
-
-* 成功执行完应该显示 vless:// 链接和二维码
-
-打开Cloudflare的CDN
-确认Cloudflare的SSL/TLS加密为“完全”
-
-将DNS页面修改代理状态为“已代理”
-
+之后就可以使用域名登录了
 接下来可以找一个订阅转换链接转换为clash格式，也可以直接用v2ray
+
+之后需要设置warp来保证自己ip安全点
+设置warp，设置路由规则，注意要放行ssh和自己的域名
 
 
